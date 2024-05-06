@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.2
+    rev: v0.4.3
     hooks:
     -   id: ruff
         types_or: [python, pyi, jupyter]
@@ -25,13 +25,13 @@ repos:
         args: [--with, main, --with, dev, -f, requirements.txt, -o, requirements-dev.txt]
     -   id: poetry-install
 -   repo: https://github.com/arashabzd/pre-commit-nbconvert
-    rev: "0.0.3"
+    rev: "0.0.4"
     hooks:
     -   id: convert-notebooks
-        args: [--format=markdown, --output-dir=reports]
+        args: [--output-dir=reports]
     -   id: clear-notebook-outputs
 -   repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.40.0
     hooks:
     -   id: markdownlint-fix
-        args: [--disable=MD013]
+        args: [--disable=MD013, --disable=MD046]
